@@ -1,1 +1,1 @@
-сайт на хостинге: https://crm.vinto.pro/
+РїСЂРѕСЃРјРѕС‚СЂ СЃР°Р№С‚Р°: https://crm.vinto.pro/
