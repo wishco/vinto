@@ -1,0 +1,46 @@
+.navbar-mic {
+  flex-grow: 1;
+  min-width: 200px;
+  max-width: 500px;
+  height: 100%;
+
+  &__title {
+    font-weight: 600;
+    color: $color02;
+    pointer-events: none;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  &__wrap {
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__item .active {
+    font-weight: 600;
+    color: $colorStyle11;
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: $colorStyle11;
+  }
+
+  &__item-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color02;
+    font-size: 14px;
+    &:hover {
+      text-decoration: none;
+      color: lighten($color02, 15%);
+    }
+
+    &:active {
+      color: $color02;
+    }
+  }
+}

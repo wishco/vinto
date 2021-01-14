@@ -1,0 +1,77 @@
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.buttons-window {
+  background-color: $colorStyle03;
+  border: 2px solid $color04;
+  position: relative;
+  top: 0px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  margin-top: 2px;
+  &:hover {
+    background-color: $colorStyle02;
+  }
+  &:focus {
+    background-color: $colorStyle02;
+    &:hover {
+      background-color: $colorStyle03;
+      &:active {
+        background-color: $colorStyle03;
+      }
+    }
+  }
+
+  &_close {
+    overflow: hidden;
+    margin-right: 3px;
+    margin-left: 4px;
+    border: 2px solid $colorStyleFill;
+    position: relative;
+    &:before {
+      content: "x";
+      background-color: transparent;
+      position: absolute;
+      color: $colorStyleFill;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      font-size: 29px;
+      font-weight: 300;
+      font-family: Verdana;
+      margin: 0;
+      padding: 0;
+      line-height: 0.6;
+    }
+  }
+
+  &_tooltips {
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: $colorStyle03;
+    position: relative;
+    &:before {
+      content: "?";
+      color: $colorStyleFill;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      font-size: 22px;
+      font-weight: 300;
+      font-family: Verdana;
+      margin: 0;
+      padding: 0;
+      line-height: 1.1;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+$color01: #4D4D4D; // цвет стандартных елементов
+$color02: #757575; // цвет стандартных елементов светлее
+$color04: #a1a0a0; // цвет стандартных елементов светлее x2
+$color05: #e7e7e7; // цвет стандартных елементов светлее x2
+$color03: #000000; // цвет дополнительных элементов
+$colorStyle01: #880000; // бренд-цвет стиля нор
+$colorStyle02: #006191; // бренд-цвет стиля тёмный
+$colorStyle03: #0087c4; // бренд-цвет стиля светлее
+$colorStyleFill: #FFFFFF; // преобладающий цвет на сайте
+$colorStyleFill2: #f6f6f6; // преобладающий цвет на сайте2
+$colorStyleFill01: #F8F9FB; // фон wrappers норм
+$colorStyleFill02: #EEF2F4; // фон wrappers светлее
+$colorStyle11: #e6b50e; // бренд-цвет2 стиля нор
+$colorStyle12: #bb9000; // бренд-цвет2 стиля тёмный
+
+$colorRequired: #ED5A54; // цвет ошибки
+
+$gutter: 20px; // стандартный отступ между элементами
+$maxArea: 900px; // максимальный размер сайта
+$minArea: 320px; // минимальный размер сайта
+
+$colorMessageText: #091e42;
+$colorMessageBackground: #FFFFFF;
+
+$colorMessageAlarm: #af0000;
+$colorMessageAlarmDark: #780000;
+$colorMessageAlarmLight: #d70000;
+
+$colorMessageWarning: #EFC92F;
+$colorMessageWarningDark: #EFC92F;
+$colorMessageWarning: #EFC92F;
+
+$colorMessageInfo: #3A71D9;
+$colorMessageInfoDark: #2b55aa;
+$colorMessageInfoLight: #5283e2;
+
+$colorMessageDefault: #e8e8e8;
+$colorMessageDefaultDark: #e0e0e0;
+$colorMessageDefaultLight: #fcfcfc;
+
+$colorToolTips: #FFFFCF;
+$colorToolTipsBg: $colorMessageText;
+
+//@mixin transform($micTooltipsRotate) {
+//  -webkit-transform: $micTooltipsRotate;
+//  -ms-transform: $micTooltipsRotate;
+//  transform: $micTooltipsRotate;
+//}
+
+:root {
+  --mic-tooltips-rotate: 0deg;
+  //--mic-tooltips-offset-x: 0;
+  //--mic-tooltips-offset-y: 0;
+  --mic-tooltips-arrow-top: 0;
+  --mic-tooltips-arrow-left: 0;
+  --mic-tooltips-arrow-width: 22px;
+  --mic-tooltips-arrow-border: 3px;
+  //--mic-tooltips-arrow-width: 100px; // для debug
+  //--mic-tooltips-arrow-border: 20px; // для debug
+  --mic-tooltips-radius: 10px;
+}

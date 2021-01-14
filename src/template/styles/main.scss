@@ -1,0 +1,150 @@
+
+@import "vars";
+@import "fonts";
+@import "norm";
+@import "bloks";
+@import "toolbar";
+@import "svg";
+@import "table";
+@import "action-item";
+@import "navbar-mic";
+@import "logo";
+@import "modal-question";
+@import "buttons/buttons-question";
+@import "buttons/buttons-window";
+@import "tool-tips";
+@import "input-box";
+
+
+@import "debug-styles"; // удалить импорт (стиль для отладки)
+
+
+
+
+
+//a, a:visited, a:active
+// color: $color01
+
+a {
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+
+
+
+html, body {
+
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  word-spacing: normal;
+  min-width: $minArea;
+  font-size: 18px;
+  background: url('../images/back-site.png') repeat;
+  //background: url('../img/backgroundq1.jpg') repeat-y, url('../img/backgroundq2.jpg') 100% 0 repeat-y;
+}
+
+.body {
+
+  background-color: $colorStyleFill;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color02;
+}
+h1 {
+  font-size: 1rem;
+}
+
+.container {
+  max-width: $maxArea;
+  margin: 0 auto;
+  background-color: $colorStyleFill;
+}
+
+.box {
+  margin-left: $gutter;
+  margin-right: $gutter;
+}
+
+.base {
+  flex-grow: 3;
+  min-width: 250px;
+}
+
+//----------------------------------------------------------------------------------
+.header {
+  &__box {
+    padding-top: $gutter/2;
+    padding-bottom: $gutter/2;
+  }
+
+  &__wrap {
+
+  }
+}
+//----------------------------------------------------------------------------------
+.main {
+
+  background-color: $colorStyleFill2;
+
+  &__window {
+    padding-top: 10px;
+    min-height: calc(100vh - 100px);
+    //background-color: $colorStyleFill;
+  }
+
+  &__wrap {
+  }
+
+  &__element {
+    padding: 10px;
+    margin: 10px;
+    background-color: $colorStyleFill01;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #cccccc;
+    flex-grow: 1;
+
+    //border: 1px solid $color04;
+  }
+  &__title {
+    font-size: 1.5rem;
+  }
+}
+//----------------------------------------------------------------------------------
+.footer {
+  &__box {
+    position: relative;
+  }
+
+  &__wrap {
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 10px;
+    color: $colorStyle02;
+  }
+}
+//----------------------------------------------------------------------------------
+
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .main {
+    &__title {
+      font-size: 1.3rem;
+    }
+  }
+}

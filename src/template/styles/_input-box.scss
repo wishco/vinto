@@ -1,0 +1,13 @@
+.input-box {
+
+  &__label {
+    font-weight: 500;
+  }
+  &__input {
+    margin: 0px 10px 0 12px ;
+    padding-left: 7px;
+    padding-right: 7px;
+    background-color: $colorStyleFill2;
+    border: solid 1px $color04;
+  }
+}

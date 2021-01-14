@@ -1,0 +1,23 @@
+.logo {
+  line-height: 0;
+  max-width: 180px;
+  text-decoration: none;
+
+  &__image {
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__text-under {
+    font-size: 10px;
+    font-weight: 300;
+    color: $colorStyle02;
+    margin-left: 39px;
+    line-height: 1;
+    pointer-events: none;
+  }
+}

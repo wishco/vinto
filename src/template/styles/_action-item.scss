@@ -1,0 +1,45 @@
+.action-item {
+  line-height: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  color: $colorStyle02;
+  transition: color 0.4s ease-out;
+  &:hover {
+    color: lighten($colorStyle02, 14%);
+    text-decoration: none;
+  }
+  &:active {
+    transition: color 0.2s ease-out;
+    color: $color03;
+  }
+
+
+  &__text {
+    font-size: 12px;
+    margin-right: 1px;
+    color: $colorStyle02;
+
+  }
+
+  &__wrap-svg {
+
+    &__svg {
+    }
+
+    &__item {
+    }
+  }
+}
+
+
+.action-item.active {
+  text-decoration: none;
+  .svg__path {
+    fill: $colorStyle11;
+  }
+
+  p {
+    color: $colorStyle11;
+  }
+}

@@ -1,0 +1,50 @@
+// BLOCK ELEMENTS ______________________________BEGIN
+
+.button-style1 {
+  cursor: pointer;
+  color: $colorStyleFill;
+  background-color: $colorStyle01;
+  transition: background-color .1s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0px;
+  text-decoration: none;
+  line-height: 1;
+  &:focus {
+    text-decoration: none;
+    color: $colorStyleFill;
+  }
+  &:hover {
+    background-color: lighten($colorStyle01, 5%);
+    text-decoration: none;
+    color: $colorStyleFill;
+  }
+  &::after {
+    opacity: .22;
+  }
+  &:active {
+    background-color: darken($colorStyle01, 5%);
+  }
+}
+
+
+.underline {
+  position: relative;
+  text-decoration: none;
+  &:after {
+    display: block;
+    content: "";
+    height: 1px;
+    background-color: $color01;
+    left: 50%;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transition: opacity 0.3s linear;
+    transform: translateX(-50%);
+    bottom: 10%;
+  }
+  &:hover:after {
+    opacity: 100;
+  }
+}

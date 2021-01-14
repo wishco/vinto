@@ -1,0 +1,76 @@
+.toolbar {
+  margin-bottom: 5px;
+  color: $color04;
+  position: relative;
+  //border-bottom: 1px solid $color04;
+  border-top: 1px solid $color04;
+
+
+  &__table {
+    position: relative;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    background-color: $colorStyleFill01;
+    color: $color04;
+    transition: color 0.4s ease-out;
+
+
+    &:disabled {
+      color: $color05;
+      cursor: default;
+    }
+    &:hover {
+      color: $colorStyle02;
+      background-color: $colorStyleFill2;
+      &:disabled {
+        color: $color05;
+        background-color: $colorStyleFill01;
+      }
+
+    }
+    &:active {
+      transition: color 0.15s ease-out;
+      color: $color03;
+
+      &:disabled {
+        color: $color05;
+        background-color: $colorStyleFill01;
+      }
+    }
+    &::after {
+      position: absolute;
+      content:"";
+      display:block;
+      width: 100%;
+      top: -1px;
+      border-bottom: 1px dotted $color04;
+    }
+    &:focus {
+      outline: 1px solid $colorStyle11;
+      color: $colorStyle03;
+      background-color: $colorStyleFill2;
+    }
+
+  }
+  &__box {
+    padding-right: 3px;
+    margin-bottom: 5px;
+
+    //color: inherit;
+  }
+  &__text {
+    font-size: 0.5rem;
+
+  }
+  &:active {
+    fill: red;
+
+  }
+
+}
+

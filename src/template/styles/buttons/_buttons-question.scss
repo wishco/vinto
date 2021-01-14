@@ -1,0 +1,220 @@
+
+.button-question {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  color: $colorStyle02;
+  transition-property: color;
+  transition-duration: .4s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px black;
+    &:active {
+      animation: radial-pulse 0.4s 1;
+      animation-fill-mode: both;
+    }
+  }
+  &:active {
+    animation: radial-pulse 0.1s 1;
+    animation-fill-mode: both;
+  }
+
+  &_cold {
+    &:hover {
+      color: $colorStyleFill;
+      text-shadow: 0px 0px 0px $color03, 0px 0px 2px $color03;
+    }
+    &:focus {
+      color: $colorStyle02;
+      &:hover {
+        text-shadow: 0px 0px 0px $color03, 0px 0px 2px $color03;
+        color: $colorStyleFill;
+        &:active {
+          color: $colorStyleFill;
+        }
+      }
+      &:active {
+        color: gray;
+      }
+    }
+  }
+
+  &_warm {
+
+    &:hover {
+      color: white;
+      text-shadow: 0px 0px 2px $color03, 0px 0px 1px $color03;
+    }
+    &:focus {
+      color: $colorStyle02;
+      &:hover {
+        text-shadow: 0px 0px 2px $color03, 0px 0px 1px $color03;
+        color: white;
+        &:active {
+          color: white;
+        }
+      }
+      &:active {
+        color: gray;
+      }
+    }
+  }
+
+  &_hot {
+    &:hover {
+      color: $colorStyleFill;
+      text-shadow: 0px 0px 0px $color03, 0px 0px 2px $color03;
+    }
+    &:focus {
+      color: $colorStyle02;
+      &:hover {
+        text-shadow: 0px 0px 0px $color03, 0px 0px 2px $color03;
+        color: $colorStyleFill;
+        &:active {
+          color: $colorStyleFill;
+        }
+      }
+      &:active {
+        color: gray;
+      }
+    }
+  }
+
+
+
+  &_cancel {
+    &:hover {
+      color: $color03;
+    }
+    &:focus {
+      color: $colorStyle02;
+      &:hover {
+        color: $color03;
+        &:active {
+          color: $color02;
+        }
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    font-weight: 600;
+    z-index: 10;
+    border-radius: 5px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    font-size: 0.85rem;
+    pointer-events: none;
+    width: 100%;
+  }
+
+  &__animate {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    background: $colorStyleFill;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    z-index: 9;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -170%;
+      right: -60%;
+      width: 70%;
+      height: 50%;
+      transition: 0.7s;
+      transition-timing-function: ease;
+      border-radius: 100%;
+      z-index: 9;
+      cursor: pointer;
+    }
+
+    &:hover:after {
+      width: 180%;
+      height: 400%;
+      border-radius: 100%;
+    }
+    &:active:after {
+      width: 180%;
+      height: 400%;
+      border-radius: 100%;
+      transition: 0.1s;
+    }
+
+    &_hot {
+      &:hover:after {
+        background-color: $colorMessageAlarm;
+
+      }
+
+      &:active:after {
+        background-color: $colorMessageAlarmDark;
+
+      }
+    }
+
+    &_warm {
+      &:hover:after {
+        background-color: $colorMessageWarning;
+      }
+
+      &:active:after {
+        background-color: $colorMessageWarningDark;
+      }
+    }
+
+    &_cold {
+      &:hover:after {
+        background-color: $colorMessageInfo;
+      }
+
+      &:active:after {
+        background-color: $colorMessageInfoDark;
+      }
+    }
+
+    &_default {
+      &:hover:after {
+        background-color: $colorMessageDefault;
+      }
+
+      &:active:after {
+        background-color: $colorMessageDefaultDark;
+      }
+    }
+
+    &_cancel {
+      &:hover:after {
+        background-color: $color05;
+      }
+
+      &:active:after {
+        background-color: $colorStyleFill2;
+      }
+    }
+  }
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+}

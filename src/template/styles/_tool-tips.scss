@@ -1,0 +1,109 @@
+
+.tooltips-parent {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltips {
+  position: absolute;
+  height: inherit;
+  visibility: hidden;
+
+  &__wrap {
+    position: relative;
+    background: $colorToolTips;
+    border: var(--mic-tooltips-arrow-border) solid #49545c;
+    border-radius: calc(var(--mic-tooltips-radius));
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: default;
+    line-height: 1.7;
+    left: 0; // позиционирование задается из ToolTips.jsx
+    top: 0; // позиционирование задается из ToolTips.jsx
+    z-index: 10002;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      width: var(--mic-tooltips-width);
+      height: var(--mic-tooltips-height);
+      top: -1px;
+      left: -1px;
+      z-index: 10002; // !!!!!!!!!!!!!!!!!!!!!!!!!!! раскомментировать после отладки // !!! для отладки закомментить
+    }
+    &:before {
+      background-color: #49545c;
+      border-radius: calc(1px + var(--mic-tooltips-radius)*2/3);
+    }
+    &:after {
+      background-color: $colorToolTips;
+      border-radius: calc(var(--mic-tooltips-radius)*2/3);
+    }
+  }
+  &__box {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+  }
+  &__simbol {
+    transform: rotate(var(--mic-tooltips-rotate));
+    transform-origin: 0 0; // поворачивание стрелкий относительно этих координат
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: var(--mic-tooltips-arrow-width);
+    height: calc(var(--mic-tooltips-arrow-width) / 2 );
+    top: var(--mic-tooltips-arrow-top);
+    left: var(--mic-tooltips-arrow-left);
+    z-index: 10001;
+    &:before, &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      // 0.707 = cos(45)
+      width: calc(0.707 * var(--mic-tooltips-arrow-width));
+      height: calc(0.707 * var(--mic-tooltips-arrow-width));
+      transform: rotate(45deg);
+    }
+    &:before {
+      background-color: #49545c;
+      //background-color: red; // !!! для отладки
+      margin-top: calc(-0.707 * var(--mic-tooltips-arrow-width) /2);
+      margin-left: calc((var(--mic-tooltips-arrow-width) - 0.707 * var(--mic-tooltips-arrow-width))/2);
+    }
+    &:after {
+      background-color: $colorToolTips;
+      //background-color: pink; // !!! для отладки
+      margin-top: calc(-0.707 * var(--mic-tooltips-arrow-width) /2 - var(--mic-tooltips-arrow-border)/0.707);
+      margin-left: calc((var(--mic-tooltips-arrow-width) - 0.707 * var(--mic-tooltips-arrow-width))/2);
+    }
+  }
+
+  &__text {
+    position: relative;
+    user-select: none;
+    text-align: left;
+    font-weight: 300;
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 0;
+    z-index: 10003;
+  }
+}
+
+
+
+
+

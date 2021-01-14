@@ -1,0 +1,45 @@
+table {
+  box-sizing: border-box;
+  border: solid $color04 1px;
+  padding: 5px;
+
+  thead {
+    background-color: $colorStyleFill2;
+    color: $color01;
+    cursor: default;
+    tr {
+
+      th {
+        min-width: 60px;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    }
+  }
+  tbody {
+    background-color: $colorStyleFill;
+    color: $color01;
+    text-align: center;
+    cursor: pointer;
+    tr {
+
+      &:nth-child(even) {
+        background-color: $colorStyleFill02;
+        &.active {
+          background-color: $colorStyle11;
+        }
+      }
+
+      td {
+        padding: 5px;
+        font-size: 0.8rem;
+      }
+
+
+    }
+    .active {
+      background-color: $colorStyle11;
+    }
+  }
+
+}

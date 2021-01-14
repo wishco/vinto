@@ -1,0 +1,313 @@
+
+.modal-question {
+  background: rgba(102, 102, 102, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding-top: 10px;
+  display: block;
+  visibility: hidden;
+
+  &_window-wrap {
+    position: relative;
+    display: block;
+  }
+
+  &__window {
+    position: absolute;
+    display: block;
+    min-width: 300px;
+    max-width: 450px;
+    text-align: center;
+    border: 3px solid $color04;
+    border-radius: 10px;
+    color: $colorStyle02;
+
+    background-color: $colorMessageBackground;
+    z-index: 999;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    &:after {
+      position: absolute;
+      color: $color04;
+      pointer-events: none;
+      content: '';
+      bottom: 5px;
+      left: 9px;
+      width: calc(100% - 50px);
+      height: 1px;
+      background-color: $color04;
+    }
+    &:before {
+      font-family: Arial;
+      content: 'VINTO';
+      position: absolute;
+      bottom: -2px;
+      right: 5px;
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      color: $color02;
+    }
+
+  }
+
+
+
+
+
+
+
+  &__window-header-wrap {
+    position: relative;
+    &:before {
+      content: "";
+      background-color: black;
+      position: absolute;
+      width: 100%;
+      height: 1.8rem;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 0;
+    }
+    &_info {
+      &:before {
+        background-color: $colorMessageInfo;
+      }
+    }
+    &_warning {
+      &:before {
+        background-color: $colorMessageWarning;
+      }
+    }
+    &_alarm {
+      &:before {
+        background-color: $colorMessageAlarm;
+      }
+    }
+    &_remove {
+      &:before {
+        background-color: $colorMessageAlarm;
+      }
+    }
+    &_add {
+      &:before {
+        background-color: $colorMessageInfo;
+      }
+    }
+    &_change {
+      &:before {
+        background-color: $colorMessageWarning;
+      }
+    }
+  }
+  &__header-title-wrap{
+    //max-width: calc(100% - 100px);
+    position: relative;
+    //flex-grow: 1;
+    background-color: transparent;
+    height: 30px;
+
+    color: $colorMessageBackground;
+    cursor: default;
+    user-select: none;
+    z-index: 1;
+    margin: 0px 10px 0 10px;
+    padding-top: 0.25rem;
+    width: 100%;
+
+    //overflow:hidden; // если длинный Title убираем лишнее и ставим точки...
+    //text-overflow: ellipsis;
+    //white-space: pre;
+    //display: inline;
+
+  }
+  &__header-title {
+    position: absolute;
+    display: inline;
+    color:  white;
+    //z-index: 1;
+    width: inherit;
+    top: 0.25rem;
+    left: 0;
+    text-align: left;
+    font-size: 0.9rem;
+
+    overflow:hidden; // если длинный Title убираем лишнее и ставим точки...
+    text-overflow: ellipsis;
+    white-space: pre;
+    display: inline;
+    &_warning {
+      color: $color03;
+      text-shadow: 0px 0px 0.5px $color03, 1px 1px 4px white;
+    }
+  }
+
+  &__header-wrap-buttons {
+    position: relative;
+
+  }
+
+
+
+  &__close {
+    background-color: $colorStyle12;
+    border: 3px solid $color04;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 3px;
+    border-top-right-radius: inherit;
+    &:before { // элемент закрытия модального окна (крестика)
+      content: "";
+      background-color: $colorMessageBackground;
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      top: 45%;
+      right: 0;
+      transform: rotate(-45deg);
+    }
+
+    &:after { // элемент закрытия модального окна (крестика)
+      content: "";
+      background-color: $colorMessageBackground;
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      top: 45%;
+      right: 0%;
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      background-color: $colorStyle11;
+
+      &:after, &:before {
+        background-color: $colorMessageText;
+      }
+    }
+
+    &:active {
+      background-color: $colorMessageText;
+
+      &:after, &:before {
+        background-color: $colorStyle11;
+      }
+    }
+  }
+  &__window-header-wrap {
+
+  }
+  &__content {
+    margin: 20px 10px 10px 20px;
+    height: 100%;
+  }
+
+  &__content-text {
+    color: $colorMessageText;
+
+    //margin-top: 20px;
+    //margin-left: 20px;
+    //margin-right: 20px;
+    margin: 0;
+    //user-select: none;
+    text-align: left;
+    cursor: default;
+    width: 100%;
+  }
+
+  &__content-image {
+    float: left;
+    margin-left: 5px;
+    margin-right: 25px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+  }
+
+  &__buttons-wrap {
+    margin-right: 10%;
+    margin-bottom: 25px;
+  }
+  &__button-question {
+    position: relative;
+    display: block;
+    margin-top: 7px;
+    margin-left: 20px;
+  }
+  &__btn {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    font-weight: 600;
+    color: $colorMessageText;
+    background-color: $colorStyleFill;
+    z-index: 150;
+    a {
+      position: absolute;
+      display: block;
+
+    }
+    &_yes {
+      position: relative;
+      //overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+
+      &:hover {
+        //color: $colorStyleFill;
+        color: #0087c4;
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 200%;
+          height: 200%;
+          bottom: -50%;
+          right: -50%;
+          z-index: 50;
+        }
+
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -50%;
+        right: -50%;
+        width: 0;
+        height: 0;
+        background: $colorMessageAlarm;
+        transition: 0.5s;
+        border-radius: 50%;
+        z-index: 50;
+      }
+
+    }
+
+    &_no {
+      &:hover {
+        background-color: $color05;
+
+      }
+    }
+  }
+}
+
+.modal-question.active {
+  visibility: visible;
+}
+
